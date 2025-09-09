@@ -12,7 +12,7 @@
 body{
     /*background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);*/
     background: var(--background-color);
-  min-height: 200vh;
+    min-height: 200vh;
    font-family: 'Poppins', sans-serif;
    font-weight: bold;
    color: var(--font-color);
@@ -132,7 +132,7 @@ text-align: center;
 .texts {
   display: flex;
   flex-direction: column;
-  animation: slide 5s infinite ease-in-out;
+  animation: slide 8s infinite ease-in-out;
   align-items: center;
   z-index: -5;
 }
@@ -240,3 +240,25 @@ footer{
     transform: translateX(-50%);
   }
 }
+
+
+h1{
+  animation: blur both 10s;
+  animation-timeline: view();
+}
+
+@keyframes blur {
+  0% {
+    filter: blur(20px);
+  }
+  30%{
+    filter: blur(0px);
+  }
+  70%{
+    filter: blur(0px);
+  }
+  100% {
+    filter: blur(20px);
+  }
+}
+  

@@ -215,19 +215,19 @@ footer{
   display: flex;
   width: max-content;
   animation: marquee 15s linear infinite;
-  z-index: -5;
+  z-index: -10;
 }
 
 .ad-content {
   display: flex;
-  z-index: -5;
+  z-index: -10;
 
 }
 
 .ad-item {
   padding: 0 3rem;
   font-weight: bold;
-  z-index: -5;
+  z-index: -10;
   font-size: 5rem;
 }
 
@@ -242,7 +242,7 @@ footer{
 }
 
 
-h1{
+.hello{
   animation: blur both 10s;
   animation-timeline: view();
 }

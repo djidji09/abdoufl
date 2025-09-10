@@ -16,13 +16,15 @@
   <header>
       <!-- Navigation -->
       <nav>
-           <!-- <h1 id="logo">abdoufl</h1> -->
-            <img id="logo" src="images/abdouflcom-high-resolution-logo-grayscale-transparent.png" alt="">
-          <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="https://wa.me/213549587532" target="_blank">
+        <!-- <h1 id="logo">abdoufl</h1> -->
+        <img id="logo" src="images/abdouflcom-high-resolution-logo-grayscale-transparent.png" alt="">
+          
+        <a class="nav-links" href="#">Home</a>
+        <a class="nav-links" href="#">About</a>
+        <a class="nav-links" href="#">Services</a>
+        <div class="burger">&#9776;</div>
+    
+        <a class="nav-links" href="https://wa.me/213549587532" target="_blank">
             <lord-icon
                 src="https://cdn.lordicon.com/dnphlhar.json"
                 trigger="hover"
@@ -30,10 +32,9 @@
                 state="hover-draw"
                 style="width:50px;height:50px">
             </lord-icon>
-        </a></li>
-      </ul>
-    </nav>
-    <div id="spacer"></div>
+        </a>
+      </nav>
+        <div id="spacer"></div>
   </header>
 
   <!-- Main Content -->
@@ -72,26 +73,31 @@
             </h1>
 
             </section>
-            <section id="ad-bar">
-               <div class="ad-bar">
-                    <div class="ad-track">
-                        <div class="ad-content">
-                        <span class="ad-item">FACEBOOK</span>
-                        <span class="ad-item">INSTAGRAM</span>
-                        <span class="ad-item">META</span>
-                        <span class="ad-item">OCULUS</span>
-                        </div>
-                        <div class="ad-content">
-                        <span class="ad-item">FACEBOOK</span>
-                        <span class="ad-item">INSTAGRAM</span>
-                        <span class="ad-item">META</span>
-                        <span class="ad-item">OCULUS</span>
-                        </div>
-                    </div>
-                    </div>
-            </section>
+               
+
+
+                    <div class="slider" style="
+            --width: 400px;
+            --height: 150px;
+            --quantity: 10;
+        ">
+            <div class="list">
+                <div class="item" style="--position: 1"><h1>FACEBOOK</h1></div>
+                <div class="item" style="--position: 2"><h1>FACEBOOK</h1></div>
+                <div class="item" style="--position: 3"><h1>FACEBOOK</h1></div>
+                <div class="item" style="--position: 4"><h1>FACEBOOK</h1></div>
+                <div class="item" style="--position: 5"><h1>FACEBOOK</h1></div>
+                <div class="item" style="--position: 6"><h1>FACEBOOK</h1></div>
+                <div class="item" style="--position: 7"><h1>FACEBOOK</h1></div>
+                <div class="item" style="--position: 8"><h1>FACEBOOK</h1></div>
+                <div class="item" style="--position: 9"><h1>FACEBOOK</h1></div>
+                <div class="item" style="--position: 10"><h1>FACEBOOK</h1></div>
+            </div>
+        </div>
+
+
             <section class="section"><h1>Our latest projects</h1></section>
-            <!-- joester problem -->
+          
         </main>
 
   <!-- Footer -->
@@ -105,6 +111,7 @@
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
  <!-- smooth scrolling  -->
 <script src="https://unpkg.com/lenis@1.3.11/dist/lenis.min.js"></script> 
+<!-- my script file-->
 <script src="script.js"></script>
 </body>
 </html>

@@ -1,3 +1,4 @@
+/*general css*/
 :root {
   --primary-color: #1C1C1D;
   --secondary-color: #F66831;
@@ -10,7 +11,6 @@
 }
 
 body{
-    /*background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);*/
     background: var(--background-color);
     min-height: 200vh;
    font-family: 'Poppins', sans-serif;
@@ -18,6 +18,7 @@ body{
    color: var(--font-color);
    width: 100vw;
    overflow-x: hidden;
+   text-align: center;
 }
 body::-webkit-scrollbar {
   display: none;
@@ -25,12 +26,11 @@ body::-webkit-scrollbar {
 h1,h2,h3 {
   text-transform: uppercase;
 }
-
+/*nav bar*/
 nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
     border: 5px solid;
     border-radius: 50px;
     margin-right: 1rem;
@@ -39,8 +39,8 @@ nav {
 
     /* glossy navbar*/
     background: rgba(112, 136, 202, 0.1); /* transparent white */
-  backdrop-filter: blur(10px);          /* blur the background */
-  border: 3px solid rgba(223, 223, 244, 0.3);
+    backdrop-filter: blur(10px);          /* blur the background */
+    border: 3px solid rgba(223, 223, 244, 0.3);
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
    /* stays at the top */
   position: fixed;  
@@ -48,6 +48,7 @@ nav {
   left: 0;
   right: 0;
   height: 60px;
+  width: 95vw;
 }
 nav a {
   text-decoration: none;
@@ -57,26 +58,30 @@ nav a {
   transition: color 0.3s;
   color: var(--font-color);
 }
-
+.burger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  margin-right: 2rem;
+}
 nav a:hover {
   color: pink; 
 }
-#spacer{
-    height: 60px;
+@media (max-width: 710px) {
+    .nav-links {
+    display: none; 
+  }
+  .burger {
+    display: block; 
+  }
 }
 
-ul {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-right: 2rem;
-    list-style-type: none;
+#spacer{
+    height: 80px;
+    margin: 0;
 }
-li{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
+
 a {
     text-decoration: none;
 }
@@ -90,7 +95,7 @@ width: 17rem;
 }
 
 
-
+/* the main section */
 
 #main-section{
     display: flex;
@@ -102,10 +107,15 @@ width: 17rem;
 
 }
 #title{
-font-size: 90px;
+font-size: 5em;
 font-weight: 800;
 margin-bottom: 10px;
 text-align: center;
+}
+@media (max-width :710px ) {
+#title{
+  font-size: 3rem;
+}
 }
 #main-section p{
     margin: 0px;
@@ -114,7 +124,7 @@ text-align: center;
     text-align: center;
     
 }
-
+/* the rotating words (to be remaked )*/
 .rotator {
   height: 3rem;          /* only one line visible */
   overflow: hidden;
@@ -167,9 +177,11 @@ text-align: center;
 
 #animated-auto{
    display: flex;
-   justify-content: center;
+   justify-content: space-evenly;
    align-items: center;
-   gap: 10rem;
+}
+@media screen {
+  
 }
 
 .section{
@@ -189,23 +201,14 @@ footer{
 
 
 
-
+/* first ad bar */
 .ad-bar {
   .ad-bar {
   background: rgba(17, 17, 17, 0.4); /* transparent bar */
   color: #fff;                      /* solid white text */
   overflow: hidden;
   white-space: nowrap;
-  border-top: 2px solid rgba(68, 68, 68, 0.4);
-  border-bottom: 2px solid rgba(68, 68, 68, 0.4);
-
-  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-  -webkit-mask-repeat: repeat;
-  -webkit-mask-size: 100% 100%;
-  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-  mask-repeat: no-repeat;
   z-index: -5;
-  mask-size: 100% 100%;
 }
 
 
@@ -240,6 +243,55 @@ footer{
     transform: translateX(-50%);
   }
 }
+
+/* second ad bar */
+.slider{
+    width: 100%;
+    height: var(--height);
+    overflow: hidden;
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        #000 10% 90%,
+        transparent
+    );
+}
+.slider .list{
+    display: flex;
+    width: 100%;
+    min-width: calc(var(--width) * var(--quantity));
+    position: relative;
+}
+.slider .list .item{
+    width: var(--width);
+    height: var(--height);
+    position: absolute;
+    left: 100%;
+    animation: autoRun 20s linear infinite;
+    transition: filter 0.5s;
+    animation-delay: calc( (20s / var(--quantity)) * (var(--position) - 1) - 10s)!important;
+}
+.slider .list .item h1{
+  font-size: 4rem;
+}
+.slider .list .item img{
+    width: 100%;
+}
+@keyframes autoRun{
+    from{
+        left: 100%;
+    }to{
+        left: calc(var(--width) * -1);
+    }
+}
+.slider:hover .item{
+    animation-play-state: paused!important;
+    filter: grayscale(1);
+}
+.slider .item:hover{
+    filter: grayscale(0);
+}
+
 
 
 .hello{

@@ -35,7 +35,7 @@ nav {
     border-radius: 50px;
     margin-right: 1rem;
     margin-left: 1rem;
-    margin-top: 10px;
+    margin-top: 20px;
 
     /* glossy navbar*/
     background: rgba(112, 136, 202, 0.1); /* transparent white */
@@ -44,7 +44,7 @@ nav {
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
    /* stays at the top */
   position: fixed;  
-  top: 5;
+  top: 0;
   left: 0;
   right: 0;
   height: 60px;
